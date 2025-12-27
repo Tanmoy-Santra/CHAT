@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buggy Shop</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+
+  <!-- BUG 1: CSS is inside <style> but some selectors are wrong on purpose -->
+ 
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Buggy Shopping Website</h1>
+    <p>Total Cart Items: <span id="cartCount">0</span></p>
+  </header>
+
+  <div class="container">
+
+    <h2>Products</h2>
+
+    <div class="loader" id="loader"></div>
+
+    <div class="products" id="productList">
+      <!-- Product Cards -->
+      <div class="product-card">
+        <img src="https://picsum.photos/200?1" />
+        <h3>Product 1</h3>
+        <p>Price: ₹500</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://picsum.photos/200?2" />
+        <h3>Product 2</h3>
+        <p>Price: ₹800</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://picsum.photos/200?3" />
+        <h3>Product 3</h3>
+        <p>Price: ₹1200</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <form id="checkoutForm">
+      <h2>Checkout Form</h2>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <input type="email" id="email" placeholder="Enter your email" />
+      <button type="submit">Submit</button>
+    </form>
+
+  </div>
+
+  <!-- BUG 3: Script is before closing body but uses elements not loaded properly in some cases -->
+ 
+</body>
+</html>
