@@ -39,12 +39,15 @@ body {
       background: green;
       color: white;
       border: none;
+      border-radius: 20px;
       padding: 10px;
       cursor: pointer;
+      outline: none;
+      font-size: small;
     }
 
     button:hover {
-      background: darkgreen;
+      background: rgb(27, 247, 27);
     }
 
     /* Loader */
